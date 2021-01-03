@@ -1,0 +1,43 @@
+version: "3.9"
+services:
+  web:
+    ports:
+      - "3000:3000"
+    build: ./frontend
+    volumes:
+      - /app/node_modules/
+      - ./frontend/:/app/
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/app/:/app/app
+    command: "/start-reload.sh"
+    environment:
+      PORT: 8000
+      LOG_LEVEL: debug
+    links:
+      - "db:db"
+      - "redis:redis"
+  db:
+    image: library/postgres:13.1
+    restart: always
+    environment:
+      POSTGRES_USER: poker_dev
+      POSTGRES_PASSWORD: 123
+    ports:
+      - 127.0.0.1:5432:5432
+    volumes:
+      - poker_db:/var/lib/postgresql/data:rw
+
+  redis:
+    image: library/redis:latest
+    volumes:
+      - poker_redis:/data:rw
+
+volumes:
+  poker_db:
+    driver: local
+  poker_redis:
+    driver: local

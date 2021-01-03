@@ -1,0 +1,7 @@
+fastapi
+pip-tools
+jinja2
+tortoise-orm[asyncpg]
+broadcaster[redis]
+aerich
+uvicorn

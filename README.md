@@ -62,3 +62,9 @@ UI of game details with a few cast votes for the tasks.
 
 API documentation generated with FastAPI 
 ![API docs](https://www.evernote.com/shard/s46/sh/6be693fe-9f97-4331-94ac-8c11df93d187/11917e845c87c2b3/res/135e8ddb-25b9-40a5-bf4d-4beb8859308e)
+
+# TODO
+  * Finalise testing of the backend and frontend parts focusing on testing websockets communication
+  * Implement features of explicit joining for the game as a player
+  * Set voting time boundaries for each task in the game
+  * Add explicit authentication backend

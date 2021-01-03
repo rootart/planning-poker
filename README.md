@@ -55,7 +55,7 @@ plan-cards_web_1       docker-entrypoint.sh npm start   Up      0.0.0.0:3000->30
 Open http://localhost:3000 to make sure that UI is rendering properly and http://localhost:8000/docs/ to check swagger documentation of the APIs.
 
 
-# Screenshots 
+## Screenshots 
 
 UI of game details with a few cast votes for the tasks.
 ![Game details](https://www.evernote.com/shard/s46/sh/3ad6fac8-eb2a-43c8-8e27-90d18e6065c5/1446c8a1104ac0c4/res/3253b39d-ada1-4eb3-842a-34b9f26cd7f4)
@@ -63,7 +63,7 @@ UI of game details with a few cast votes for the tasks.
 API documentation generated with FastAPI 
 ![API docs](https://www.evernote.com/shard/s46/sh/6be693fe-9f97-4331-94ac-8c11df93d187/11917e845c87c2b3/res/135e8ddb-25b9-40a5-bf4d-4beb8859308e)
 
-# TODO
+## TODO
   * Finalise testing of the backend and frontend parts focusing on testing websockets communication
   * Implement features of explicit joining for the game as a player
   * Set voting time boundaries for each task in the game

@@ -17,7 +17,8 @@ from app.models import (
     Task_Pydantic,
     TaskIn_Pydantic,
     Game_Pydantic,
-    GameIn_Pydantic, ComplexityTypes,
+    GameIn_Pydantic,
+    ComplexityTypes,
 )
 from app.settings import get_settings
 
@@ -48,7 +49,7 @@ async def add_game(
 
 
 @routes.get('/games/')
-async def add_game(
+async def list_games(
     user: UUID = Depends(require_user_cookie)  # noqa
 ):
     return await Game_Pydantic.from_queryset(models.Game.filter(author_id=user))
